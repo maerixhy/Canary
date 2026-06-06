@@ -1,0 +1,10 @@
+.env
+*.env
+__pycache__/
+*.py[cod]
+.DS_Store
+*.log
+venv/
+.venv/
+canary-logo*.png
+favicon-preview.png

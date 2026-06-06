@@ -346,12 +346,14 @@ Return ONLY the JSON."""
         print(f"Comp analyze error: {e}")
         return jsonify({{"error": str(e)}}), 500
 
+ensure_index()
+
 if __name__ == '__main__':
-    ensure_index()
     print("\n🐤 Canary is live")
     print(f"   Elastic MCP : {'✅ connected' if MCP_CONNECTED else '⚠️  not connected'}")
     print(f"   MCP URL     : {ES_MCP_URL}")
     print(f"   Elastic     : {ES_URL}")
     print(f"   Model       : gemini-2.5-flash")
     print(f"   UI          : http://localhost:8080\n")
-    app.run(host='0.0.0.0', port=8080, debug=False)
+    port = int(os.environ.get('PORT', 8080))
+    app.run(host='0.0.0.0', port=port, debug=False)
