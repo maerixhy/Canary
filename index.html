@@ -298,6 +298,87 @@
     .sig-badge.critical { background: var(--danger-bg); color: var(--danger-dk); }
     .sig-badge.warn { background: #FEF3C7; color: #92400E; }
 
+    .or-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 22px 24px; margin-bottom: 14px; }
+    .or-card-hdr { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; }
+    .or-company { font-family: 'Fraunces', serif; font-size: 20px; color: var(--text); letter-spacing: -0.3px; }
+    .or-verdict { border-radius: 7px; padding: 14px 16px; margin-bottom: 18px; }
+    .or-verdict.accept  { background: #F0FDF4; border: 1px solid #BBF7D0; }
+    .or-verdict.negotiate { background: #FFFBEB; border: 1px solid #FDE68A; }
+    .or-verdict.caution { background: #FFF1F2; border: 1px solid #FECDD3; }
+    .or-verdict-label { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+    .or-verdict.accept  .or-verdict-label { color: var(--green); }
+    .or-verdict.negotiate .or-verdict-label { color: var(--amber); }
+    .or-verdict.caution .or-verdict-label { color: var(--danger); }
+    .or-verdict-text { font-size: 13px; color: var(--text-2); line-height: 1.6; }
+    .or-verdict-text strong { color: var(--text); }
+    .or-section-lbl { font-size: 10px; color: var(--text-3); text-transform: uppercase; letter-spacing: .8px; font-weight: 500; margin-bottom: 10px; }
+    .or-factors { display: flex; flex-direction: column; gap: 7px; margin-bottom: 18px; }
+    .or-factor { display: flex; align-items: flex-start; gap: 9px; font-size: 13px; color: var(--text-2); line-height: 1.5; }
+    .or-factor-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; margin-top: 5px; }
+    .or-factor-dot.good { background: var(--green); }
+    .or-factor-dot.warn { background: var(--amber); }
+    .or-factor-dot.bad  { background: var(--danger); }
+    .or-details { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .or-detail-item { background: var(--bg); border-radius: 6px; padding: 10px 12px; }
+    .or-detail-key { font-size: 10px; color: var(--text-3); text-transform: uppercase; letter-spacing: .8px; margin-bottom: 4px; }
+    .or-detail-val { font-size: 13px; color: var(--text); font-weight: 500; }
+    .or-empty { padding: 60px 24px; text-align: center; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; }
+    .or-empty-icon { font-size: 28px; opacity: .2; margin-bottom: 12px; }
+    .or-empty-title { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+    .or-empty-sub { font-size: 13px; color: var(--text-3); }
+    .vl-row { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 16px 18px; margin-bottom: 10px; cursor: pointer; transition: border-color .15s; }
+    .vl-row:hover { border-color: var(--yellow); }
+    .vl-row-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+    .vl-name { font-family: 'Fraunces', serif; font-size: 16px; color: var(--text); letter-spacing: -0.3px; }
+    .vl-meta { display: flex; align-items: center; gap: 10px; }
+    .vl-bars { display: flex; gap: 3px; align-items: center; margin-bottom: 10px; }
+    .vl-bar { height: 5px; border-radius: 3px; background: var(--border); }
+    .vl-bar.on-stable { background: var(--green); }
+    .vl-bar.on-caution { background: var(--yellow); }
+    .vl-bar.on-volatile { background: var(--danger); }
+    .vl-stats { display: flex; gap: 18px; margin-bottom: 12px; }
+    .vl-stat { }
+    .vl-stat-val { font-family: 'DM Mono', monospace; font-size: 15px; font-weight: 500; color: var(--text); line-height: 1; margin-bottom: 3px; }
+    .vl-stat-val.up { color: var(--green); }
+    .vl-stat-val.dn { color: var(--danger); }
+    .vl-stat-val.warn { color: var(--amber); }
+    .vl-stat-lbl { font-size: 10px; color: var(--text-3); text-transform: uppercase; letter-spacing: .7px; }
+    .vl-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+    .vl-tag { font-size: 11px; padding: 3px 9px; border-radius: 4px; font-weight: 500; }
+    .vl-tag.bad  { background: var(--danger-bg); color: var(--danger-dk); }
+    .vl-tag.warn { background: var(--yellow-bg); color: var(--yellow-dk); }
+    .vl-tag.ok   { background: #F4F4F5; color: var(--text-3); }
+    .vl-empty { padding: 60px 24px; text-align: center; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; color: var(--text-3); font-size: 13px; }
+    .cp-section-lbl { font-size: 10px; color: var(--text-3); text-transform: uppercase; letter-spacing: .8px; font-weight: 500; margin-bottom: 10px; }
+    .cp-offers-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px,1fr)); gap: 10px; margin-bottom: 26px; }
+    .cp-offer-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 16px; }
+    .cp-offer-name { font-family: 'Fraunces', serif; font-size: 15px; color: var(--text); margin-bottom: 12px; display: flex; align-items: center; justify-content: space-between; }
+    .cp-offer-row { margin-bottom: 8px; }
+    .cp-offer-key { font-size: 10px; color: var(--text-3); text-transform: uppercase; letter-spacing: .7px; margin-bottom: 3px; }
+    .cp-offer-val { font-family: 'DM Mono', monospace; font-size: 13px; color: var(--text); font-weight: 500; }
+    .cp-table-wrap { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin-bottom: 10px; }
+    .cp-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .cp-th { text-align: left; padding: 10px 16px; font-size: 10px; color: var(--text-3); text-transform: uppercase; letter-spacing: .8px; font-weight: 500; border-bottom: 2px solid var(--border); white-space: nowrap; }
+    .cp-td { padding: 10px 16px; border-bottom: 1px solid var(--border-2); }
+    .cp-td.mono { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--text-2); }
+    .cp-td.bold { font-weight: 500; color: var(--text); }
+    .cp-row-alt { background: var(--bg); }
+    .cp-note { font-size: 11px; color: var(--text-4); margin-top: 6px; }
+    .tl-kanban { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+    .tl-col-hdr { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; padding-bottom: 10px; }
+    .tl-col-title { font-size: 12px; font-weight: 600; color: var(--text); }
+    .tl-col-count { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--text-4); background: var(--bg); padding: 1px 8px; border-radius: 4px; }
+    .tl-card { background: var(--surface); border: 1px solid var(--border); border-radius: 7px; padding: 12px 14px; margin-bottom: 8px; cursor: pointer; transition: border-color .15s; }
+    .tl-card:hover { border-color: var(--yellow); }
+    .tl-card-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
+    .tl-card-name { font-size: 13px; font-weight: 600; color: var(--text); }
+    .tl-card-time { font-size: 10px; color: var(--text-4); font-family: 'DM Mono', monospace; }
+    .tl-card-bottom { display: flex; align-items: center; justify-content: space-between; }
+    .tl-card-sector { font-size: 11px; color: var(--text-3); }
+    .tl-col-empty { font-size: 12px; color: var(--text-4); padding: 12px 0; }
+    .tl-col-applying { border-top: 2px solid var(--border); }
+    .tl-col-interviewing { border-top: 2px solid var(--text-3); }
+    .tl-col-offer { border-top: 2px solid var(--yellow); }
   </style>
 </head>
 <body>
@@ -326,7 +407,7 @@
       <div class="sb-section">Account</div>
       <div class="nav-item" onclick="switchView('alerts', this)"><span class="nav-icon">⊙</span> Alerts</div>
       <div class="nav-item" onclick="switchView('profile', this)"><span class="nav-icon">◻</span> Profile</div>
-      <div class="nav-item" onclick="switchView('settings', this)"><span class="nav-icon">⚙</span> Settings</div>
+
     </div>
   </div>
 
@@ -395,44 +476,28 @@
     <div class="view-panel" id="view-offer-risk">
       <div class="view-title">Offer Risk</div>
       <div class="view-sub">Side-by-side comparison of all active offers in your pipeline.</div>
-      <div class="coming-soon">
-        <div class="cs-icon">◐</div>
-        <div class="cs-title">Offer Risk Analysis</div>
-        <div class="cs-sub">Add companies with offer details to see risk comparisons here.</div>
-      </div>
+      <div id="offer-risk-content"></div>
     </div>
 
     <!-- VOLATILITY VIEW -->
     <div class="view-panel" id="view-volatility">
       <div class="view-title">Hiring Volatility</div>
-      <div class="view-sub">Track hiring velocity trends across your pipeline companies.</div>
-      <div class="coming-soon">
-        <div class="cs-icon">↑↓</div>
-        <div class="cs-title">Volatility Tracker</div>
-        <div class="cs-sub">Hiring velocity, layoff patterns, and headcount changes — coming soon.</div>
-      </div>
+      <div class="view-sub">Companies ranked by instability. Most volatile at top.</div>
+      <div id="volatility-content"></div>
     </div>
 
     <!-- COMPENSATION VIEW -->
     <div class="view-panel" id="view-compensation">
       <div class="view-title">Compensation</div>
-      <div class="view-sub">Benchmark offers against market rates for your role and level.</div>
-      <div class="coming-soon">
-        <div class="cs-icon">$</div>
-        <div class="cs-title">Compensation Benchmarks</div>
-        <div class="cs-sub">Level-by-level salary, equity, and bonus data — coming soon.</div>
-      </div>
+      <div class="view-sub">Market benchmarks and your active offer details side by side.</div>
+      <div id="compensation-content"></div>
     </div>
 
     <!-- TIMELINE VIEW -->
     <div class="view-panel" id="view-timeline">
       <div class="view-title">Interview Timeline</div>
-      <div class="view-sub">Track every stage across all your active interview processes.</div>
-      <div class="coming-soon">
-        <div class="cs-icon">◷</div>
-        <div class="cs-title">Interview Timeline</div>
-        <div class="cs-sub">Stage tracking, recruiter cadence, and decision deadlines — coming soon.</div>
-      </div>
+      <div class="view-sub">Your pipeline at a glance, organized by stage.</div>
+      <div id="timeline-content"></div>
     </div>
 
     <!-- ALERTS VIEW -->
@@ -470,17 +535,6 @@
       </div>
     </div>
 
-    <!-- SETTINGS VIEW -->
-    <div class="view-panel" id="view-settings">
-      <div class="view-title">Settings</div>
-      <div class="view-sub">Configure Canary for your workflow.</div>
-      <div class="coming-soon">
-        <div class="cs-icon">⚙</div>
-        <div class="cs-title">Settings</div>
-        <div class="cs-sub">Notification preferences, API connections, and display options — coming soon.</div>
-      </div>
-    </div>
-
   </div>
 
   <!-- ════ MODAL ════ -->
@@ -513,7 +567,8 @@
     let currentStage = 'applying';
     let activeFilters = new Set();
     let currentView = 'pipeline';
-    let analyzing = new Map(); // name → {stage, name, startTime}
+    let analyzing = new Map();
+    let pendingStageChange = null; // name → {stage, name, startTime}
 
     // ── RISK LEVEL: full 1–5 spectrum ──
     function getRiskLevel(co) {
@@ -552,8 +607,12 @@
       } else {
         const el = document.getElementById('view-' + view);
         if (el) el.classList.add('visible');
-        if (view === 'signals') renderSignalFeed();
-        if (view === 'alerts')  renderAlerts();
+        if (view === 'signals')        renderSignalFeed();
+        if (view === 'offer-risk')     renderOfferRisk();
+        if (view === 'volatility')     renderVolatility();
+        if (view === 'compensation')   renderCompensation();
+        if (view === 'timeline')       renderTimeline();
+        if (view === 'alerts')         renderAlerts();
         if (view === 'profile') document.getElementById('profile-count').textContent = pipeline.length;
       }
     }
@@ -813,13 +872,53 @@
     }
 
     // ── CHANGE STAGE + RE-ANALYZE (with full loading state) ──
-    async function changeStage(newStage) {
+    function changeStage(newStage) {
+      if (selectedIndex === null) return;
+      // If switching to offer stage, show offer details modal first
+      if (newStage === 'offer') {
+        pendingStageChange = newStage;
+        document.getElementById('od-base').value = '';
+        document.getElementById('od-equity').value = '';
+        document.getElementById('od-signing').value = '';
+        document.getElementById('od-start').value = '';
+        document.getElementById('offer-modal').classList.add('open');
+        return;
+      }
+      executeStageChange(newStage, null);
+    }
+
+    function skipOfferDetails() {
+      document.getElementById('offer-modal').classList.remove('open');
+      if (pendingStageChange) {
+        executeStageChange(pendingStageChange, null);
+        pendingStageChange = null;
+      }
+    }
+
+    function saveOfferDetails() {
+      document.getElementById('offer-modal').classList.remove('open');
+      var details = [];
+      var base    = document.getElementById('od-base').value.trim();
+      var equity  = document.getElementById('od-equity').value.trim();
+      var signing = document.getElementById('od-signing').value.trim();
+      var start   = document.getElementById('od-start').value.trim();
+      if (base)    details.push({key:'Base salary',   val:base});
+      if (equity)  details.push({key:'Equity / RSUs', val:equity});
+      if (signing) details.push({key:'Signing bonus', val:signing});
+      if (start)   details.push({key:'Start date',    val:start});
+      if (pendingStageChange) {
+        executeStageChange(pendingStageChange, details.length ? details : null);
+        pendingStageChange = null;
+      }
+    }
+
+    async function executeStageChange(newStage, offerDetails) {
       if (selectedIndex === null) return;
       const co = pipeline[selectedIndex];
       const company = co.name;
       const key = company.toLowerCase();
+      const offerText = offerDetails ? offerDetails.map(function(o){return o.key+': '+o.val;}).join(', ') : '';
 
-      // Remove from pipeline, move to analyzing
       pipeline.splice(selectedIndex, 1);
       selectedIndex = null;
       save();
@@ -831,11 +930,12 @@
       try {
         const res = await fetch('/analyze', {
           method: 'POST', headers: {'Content-Type': 'application/json'},
-          body: JSON.stringify({company, stage: newStage, offer: ''})
+          body: JSON.stringify({company, stage: newStage, offer: offerText})
         });
         const data = await res.json();
         analyzing.delete(key);
         const entry = {...buildEntry(company, newStage, data), lastAnalyzed: Date.now()};
+        if (offerDetails) entry.offerDetails = offerDetails;
         pipeline.unshift(entry);
         selectedIndex = 0;
         selectedAnalyzing = null;
@@ -845,6 +945,7 @@
       } catch(e) {
         analyzing.delete(key);
         const entry = {...buildDemo(company, newStage), lastAnalyzed: Date.now()};
+        if (offerDetails) entry.offerDetails = offerDetails;
         pipeline.unshift(entry);
         selectedIndex = 0;
         selectedAnalyzing = null;
@@ -930,8 +1031,364 @@
     function cap(s) { return s.charAt(0).toUpperCase()+s.slice(1); }
     function save() { localStorage.setItem('canary-pipeline', JSON.stringify(pipeline)); }
 
+    function jumpToCompany(idx) {
+      switchView("pipeline", document.querySelector(".nav-item"));
+      setTimeout(function() { if (idx >= 0 && idx < pipeline.length) selectCompany(idx); }, 120);
+    }
+
+    function renderOfferRisk() {
+      var el = document.getElementById("offer-risk-content");
+      var offers = pipeline.filter(function(co) { return co.stage === "offer"; });
+
+      if (!offers.length) {
+        el.innerHTML = [
+          "<div class=\"or-empty\">",
+          "  <div class=\"or-empty-icon\">◐</div>",
+          "  <div class=\"or-empty-title\">No active offers yet</div>",
+          "  <div class=\"or-empty-sub\">Switch a company's stage to <strong>Got the offer</strong> in the Pipeline tab to see your offer risk analysis here.</div>",
+          "</div>"
+        ].join("");
+        return;
+      }
+
+      var h = "";
+
+      offers.forEach(function(co) {
+        var idx      = pipeline.indexOf(co);
+        var r        = getRiskLevel(co);
+        var sIcon    = {stable:"✓", caution:"⚠", volatile:"✕"};
+        var sChip    = {stable:"chip-s", caution:"chip-c", volatile:"chip-v"};
+
+        // Verdict logic based on status + risk level
+        var verdictCls, verdictLabel, verdictText;
+        if (co.status === "stable" && r <= 2) {
+          verdictCls   = "accept";
+          verdictLabel = "● Accept";
+          verdictText  = "<strong>Low risk.</strong> Signals look healthy. This offer is worth taking — focus energy on negotiating terms rather than whether to join.";
+        } else if (co.status === "stable" && r === 3) {
+          verdictCls   = "negotiate";
+          verdictLabel = "◑ Negotiate";
+          verdictText  = "<strong>Mostly healthy, minor concerns.</strong> The company is solid but some signals warrant attention. Negotiate hard before committing.";
+        } else if (co.status === "caution" && r <= 3) {
+          verdictCls   = "negotiate";
+          verdictLabel = "◑ Negotiate";
+          verdictText  = "<strong>Mixed signals detected.</strong> There are real risks here. Get clarity on team stability and project funding before signing — and protect yourself with a strong signing bonus.";
+        } else if (co.status === "caution" && r >= 4) {
+          verdictCls   = "caution";
+          verdictLabel = "⚠ Proceed with caution";
+          verdictText  = "<strong>Significant risk factors present.</strong> Don't sign without vesting cliff protection, a clear runway timeline from your future manager, and competitive offers in hand as leverage.";
+        } else {
+          verdictCls   = "caution";
+          verdictLabel = "✕ Walk away or negotiate hard";
+          verdictText  = "<strong>High-risk company.</strong> The signals here are serious. If you must accept, front-load your comp (signing bonus, accelerated vesting) and keep other options open.";
+        }
+
+        h += "<div class=\"or-card\">";
+
+        // Header
+        h += "<div class=\"or-card-hdr\">";
+        h += "  <div class=\"or-company\">" + co.name + "</div>";
+        h += "  <span class=\"status-chip " + (sChip[co.status]||"chip-s") + "\">" + (sIcon[co.status]||"") + " " + cap(co.status) + "</span>";
+        h += "</div>";
+
+        // Verdict
+        h += "<div class=\"or-verdict " + verdictCls + "\">";
+        h += "  <div class=\"or-verdict-label\">" + verdictLabel + "</div>";
+        h += "  <div class=\"or-verdict-text\">" + verdictText + "</div>";
+        h += "</div>";
+
+        // Risk factors from signals
+        if (co.signals && co.signals.length) {
+          h += "<div class=\"or-section-lbl\">Risk factors for this offer</div>";
+          h += "<div class=\"or-factors\">";
+          co.signals.forEach(function(s) {
+            var dotCls = s.type === "bad" ? "bad" : s.type === "warn" ? "warn" : "good";
+            h += "<div class=\"or-factor\">";
+            h += "  <div class=\"or-factor-dot " + dotCls + "\"></div>";
+            h += "  <span><strong>" + s.label + ":</strong> " + s.text + "</span>";
+            h += "</div>";
+          });
+          h += "</div>";
+        }
+
+        // Negotiation leverage from tips
+        if (co.tips && co.tips.length) {
+          h += "<div class=\"or-section-lbl\">Negotiation angles</div>";
+          h += "<div class=\"or-factors\">";
+          co.tips.forEach(function(t) {
+            h += "<div class=\"or-factor\">";
+            h += "  <div class=\"or-factor-dot warn\"></div>";
+            h += "  <span>" + t + "</span>";
+            h += "</div>";
+          });
+          h += "</div>";
+        }
+
+        // Offer details if entered
+        if (co.offerDetails && co.offerDetails.length) {
+          h += "<div class=\"or-section-lbl\">Your offer</div>";
+          h += "<div class=\"or-details\">";
+          co.offerDetails.forEach(function(o) {
+            h += "<div class=\"or-detail-item\">";
+            h += "  <div class=\"or-detail-key\">" + o.key + "</div>";
+            h += "  <div class=\"or-detail-val\">" + o.val + "</div>";
+            h += "</div>";
+          });
+          h += "</div>";
+        }
+
+        // Jump link
+        h += "<div style=\"margin-top:16px;padding-top:14px;border-top:1px solid var(--border);display:flex;justify-content:flex-end;\">";
+        h += "  <button onclick=\"jumpToCompany(" + idx + ")\" style=\"font-size:12px;color:var(--text-3);background:none;border:1px solid var(--border);padding:5px 14px;border-radius:5px;cursor:pointer;font-family:'DM Sans',sans-serif;\">View full analysis →</button>";
+        h += "</div>";
+
+        h += "</div>";
+      });
+
+      el.innerHTML = h;
+    }
+
+    function renderVolatility() {
+      var el = document.getElementById("volatility-content");
+      if (!pipeline.length) {
+        el.innerHTML = "<div class=\"vl-empty\">No companies tracked yet. Add some from the Pipeline tab first.</div>";
+        return;
+      }
+
+      // Sort: highest risk first, ties broken alphabetically
+      var sorted = pipeline.slice().sort(function(a,b) {
+        var diff = getRiskLevel(b) - getRiskLevel(a);
+        if (diff !== 0) return diff;
+        return a.name.localeCompare(b.name);
+      });
+
+      var h = "";
+      sorted.forEach(function(co) {
+        var idx      = pipeline.indexOf(co);
+        var r        = getRiskLevel(co);
+        var barCls   = "on-" + co.status;
+        var sIcon    = {stable:"✓", caution:"⚠", volatile:"✕"};
+        var sChip    = {stable:"chip-s", caution:"chip-c", volatile:"chip-v"};
+        var hMet     = co.metrics && co.metrics.find(function(m){return m.label==="Hiring vel.";});
+        var oMet     = co.metrics && co.metrics.find(function(m){return m.label==="Open roles";});
+        var gMet     = co.metrics && co.metrics.find(function(m){return m.label==="Glassdoor";});
+        var hVal     = hMet ? hMet.val : "—";
+        var hColor   = hMet && hMet.dc==="up" ? "up" : hMet && hMet.dc==="dn" ? "dn" : "warn";
+        var warnSigs = co.signals ? co.signals.filter(function(s){return s.type!=="ok";}) : [];
+        var okSigs   = co.signals ? co.signals.filter(function(s){return s.type==="ok";})  : [];
+
+        var bars = "<div class=\"vl-bars\">";
+        for (var n=1;n<=5;n++) bars += "<div class=\"vl-bar " + (n<=r?barCls:"") + "\" style=\"width:28px;\"></div>";
+        bars += "<span style=\"font-size:11px;color:var(--text-4);margin-left:6px;\">Risk " + r + "/5</span></div>";
+
+        var tags = "<div class=\"vl-tags\">";
+        if (warnSigs.length) {
+          warnSigs.forEach(function(s){ tags += "<span class=\"vl-tag " + s.type + "\">" + s.label + "</span>"; });
+        } else if (okSigs.length) {
+          okSigs.slice(0,2).forEach(function(s){ tags += "<span class=\"vl-tag ok\">" + s.label + "</span>"; });
+        } else {
+          tags += "<span class=\"vl-tag ok\">No risk signals</span>";
+        }
+        tags += "</div>";
+
+        h += "<div class=\"vl-row\" onclick=\"jumpToCompany(" + idx + ")\">";
+        h += "<div class=\"vl-row-top\">";
+        h += "  <div class=\"vl-name\">" + co.name + "</div>";
+        h += "  <div class=\"vl-meta\">";
+        h += "    <span style=\"font-size:11px;color:var(--text-3);\">" + stageLabel(co.stage) + "</span>";
+        h += "    <span class=\"status-chip " + (sChip[co.status]||"chip-s") + "\">" + (sIcon[co.status]||"") + " " + cap(co.status) + "</span>";
+        h += "  </div></div>";
+        h += bars;
+        h += "<div class=\"vl-stats\">";
+        h += "<div class=\"vl-stat\"><div class=\"vl-stat-val " + hColor + "\">" + hVal + "</div><div class=\"vl-stat-lbl\">Hiring vel.</div></div>";
+        h += "<div class=\"vl-stat\"><div class=\"vl-stat-val\">" + (oMet?oMet.val:"—") + "</div><div class=\"vl-stat-lbl\">Open roles</div></div>";
+        h += "<div class=\"vl-stat\"><div class=\"vl-stat-val\">" + (gMet?gMet.val:"—") + "</div><div class=\"vl-stat-lbl\">Glassdoor</div></div>";
+        h += "</div>";
+        h += tags;
+        h += "</div>";
+      });
+
+      el.innerHTML = h;
+    }
+
+        function renderCompensation() {
+      var el = document.getElementById("compensation-content");
+      var h = "";
+
+      // Section 1: Market rate lookup
+      h += "<div style=\"background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:18px;margin-bottom:14px;\">";
+      h += "  <div class=\"cp-section-lbl\" style=\"margin-bottom:8px;\">Market rate lookup</div>";
+      h += "  <div style=\"font-size:13px;color:var(--text-2);margin-bottom:12px;\">Search any role to see 2026 market ranges.</div>";
+      h += "  <div style=\"display:flex;gap:8px;\">";
+      h += "    <input id=\"comp-role-input\" placeholder=\"e.g. Senior Product Manager, L4 SWE, UX Researcher...\" style=\"flex:1;border:1px solid var(--border);border-radius:6px;padding:8px 12px;font-size:13px;font-family:'DM Sans',sans-serif;outline:none;background:var(--bg);\" onkeydown=\"if(event.key==='Enter')lookupComp()\" />";
+      h += "    <button onclick=\"lookupComp()\" style=\"background:var(--yellow);color:#1a0f00;border:none;border-radius:6px;padding:8px 16px;font-size:12px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;white-space:nowrap;\">Look up →</button>";
+      h += "  </div>";
+      h += "  <div id=\"comp-result\" style=\"margin-top:14px;\"></div>";
+      h += "</div>";
+
+      // Section 2: Offer analysis
+      h += "<div style=\"background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:18px;\">";
+      h += "  <div class=\"cp-section-lbl\" style=\"margin-bottom:8px;\">Is my offer competitive?</div>";
+      h += "  <div style=\"font-size:13px;color:var(--text-2);margin-bottom:14px;\">Enter your role and offer details — Canary will tell you if it's above, at, or below market.</div>";
+      h += "  <div style=\"display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px;\">";
+      h += "    <div><div style=\"font-size:11px;font-weight:600;color:var(--text);margin-bottom:5px;\">Company</div><input id=\"oa-company\" placeholder=\"e.g. Stripe\" style=\"width:100%;border:1px solid var(--border);border-radius:6px;padding:8px 12px;font-size:13px;font-family:'DM Sans',sans-serif;outline:none;background:var(--bg);\" /></div>";
+      h += "    <div><div style=\"font-size:11px;font-weight:600;color:var(--text);margin-bottom:5px;\">Role & level</div><input id=\"oa-role\" placeholder=\"e.g. Senior SWE, L5\" style=\"width:100%;border:1px solid var(--border);border-radius:6px;padding:8px 12px;font-size:13px;font-family:'DM Sans',sans-serif;outline:none;background:var(--bg);\" /></div>";
+      h += "    <div><div style=\"font-size:11px;font-weight:600;color:var(--text);margin-bottom:5px;\">Base salary</div><input id=\"oa-base\" placeholder=\"e.g. $145,000\" style=\"width:100%;border:1px solid var(--border);border-radius:6px;padding:8px 12px;font-size:13px;font-family:'DM Sans',sans-serif;outline:none;background:var(--bg);\" /></div>";
+      h += "    <div><div style=\"font-size:11px;font-weight:600;color:var(--text);margin-bottom:5px;\">Equity / RSUs</div><input id=\"oa-equity\" placeholder=\"e.g. $200K over 4 years\" style=\"width:100%;border:1px solid var(--border);border-radius:6px;padding:8px 12px;font-size:13px;font-family:'DM Sans',sans-serif;outline:none;background:var(--bg);\" /></div>";
+      h += "    <div><div style=\"font-size:11px;font-weight:600;color:var(--text);margin-bottom:5px;\">Signing bonus</div><input id=\"oa-signing\" placeholder=\"e.g. $25,000\" style=\"width:100%;border:1px solid var(--border);border-radius:6px;padding:8px 12px;font-size:13px;font-family:'DM Sans',sans-serif;outline:none;background:var(--bg);\" /></div>";
+      h += "    <div style=\"display:flex;align-items:flex-end;\"><button onclick=\"analyzeOffer()\" style=\"width:100%;background:#161616;color:#fff;border:none;border-radius:6px;padding:9px 16px;font-size:12px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;\">Analyze offer →</button></div>";
+      h += "  </div>";
+      h += "  <div id=\"oa-result\"></div>";
+      h += "</div>";
+
+      el.innerHTML = h;
+    }
+
+    function analyzeOffer() {
+      var company = document.getElementById("oa-company").value.trim();
+      var role    = document.getElementById("oa-role").value.trim();
+      var base    = document.getElementById("oa-base").value.trim();
+      var equity  = document.getElementById("oa-equity").value.trim();
+      var signing = document.getElementById("oa-signing").value.trim();
+      var result  = document.getElementById("oa-result");
+      if (!role || !base) {
+        result.innerHTML = "<div style=\"font-size:13px;color:var(--danger);\">Please enter at least a role and base salary.</div>";
+        return;
+      }
+      result.innerHTML = "<div style=\"display:flex;align-items:center;gap:10px;font-size:13px;color:var(--text-3);margin-top:4px;\"><div class=\"spinner\" style=\"width:14px;height:14px;border-width:2px;\"></div>Analyzing your offer...</div>";
+      var params = "role=" + encodeURIComponent(role) + "&company=" + encodeURIComponent(company) + "&base=" + encodeURIComponent(base) + "&equity=" + encodeURIComponent(equity) + "&signing=" + encodeURIComponent(signing);
+      fetch("/comp-analyze?" + params)
+        .then(function(r){return r.json();})
+        .then(function(data) {
+          if (data.error) { result.innerHTML = "<div style=\"font-size:13px;color:var(--danger);\">Something went wrong. Try again.</div>"; return; }
+          var verdictColor = data.verdict==="above" ? "var(--green)" : data.verdict==="below" ? "var(--danger)" : "var(--amber)";
+          var verdictLabel = data.verdict==="above" ? "Above market" : data.verdict==="below" ? "Below market" : "At market";
+          var verdictIcon  = data.verdict==="above" ? "↑" : data.verdict==="below" ? "↓" : "≈";
+          var h2 = "<div style=\"border-top:1px solid var(--border);padding-top:14px;margin-top:4px;\">";
+          h2 += "<div style=\"display:flex;align-items:center;gap:10px;margin-bottom:12px;\">";
+          h2 += "  <span style=\"font-size:20px;font-weight:700;color:" + verdictColor + ";font-family:'DM Mono',monospace;\">" + verdictIcon + "</span>";
+          h2 += "  <div><div style=\"font-size:14px;font-weight:600;color:" + verdictColor + ";margin-bottom:2px;\">" + verdictLabel + "</div>";
+          h2 += "  <div style=\"font-size:12px;color:var(--text-3);\">" + (data.range||"") + "</div></div>";
+          h2 += "</div>";
+          if (data.summary) h2 += "<div style=\"font-size:13px;color:var(--text-2);line-height:1.6;margin-bottom:12px;\">" + data.summary + "</div>";
+          if (data.tips && data.tips.length) {
+            h2 += "<div style=\"font-size:10px;color:var(--text-3);text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px;\">Negotiation tips</div>";
+            data.tips.forEach(function(t) {
+              h2 += "<div style=\"display:flex;gap:8px;font-size:13px;color:var(--text-2);margin-bottom:6px;line-height:1.5;\">";
+              h2 += "  <span style=\"color:var(--yellow);font-weight:600;flex-shrink:0;\">→</span><span>" + t + "</span>";
+              h2 += "</div>";
+            });
+          }
+          h2 += "</div>";
+          result.innerHTML = h2;
+        })
+        .catch(function(){ result.innerHTML = "<div style=\"font-size:13px;color:var(--danger);\">Could not reach server.</div>"; });
+    }
+
+        function lookupComp() {
+      var input = document.getElementById("comp-role-input");
+      var result = document.getElementById("comp-result");
+      var role = input ? input.value.trim() : "";
+      if (!role) return;
+
+      result.innerHTML = "<div style=\"display:flex;align-items:center;gap:10px;font-size:13px;color:var(--text-3);\"><div class=\"spinner\" style=\"width:14px;height:14px;border-width:2px;\"></div>Looking up " + role + "...</div>";
+
+      fetch("/comp?role=" + encodeURIComponent(role))
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+          if (data.error) { result.innerHTML = "<div style=\"font-size:13px;color:var(--danger);\">Something went wrong. Try again.</div>"; return; }
+          var h2 = "<div style=\"border-top:1px solid var(--border);padding-top:14px;\">";
+          h2 += "<div style=\"font-size:12px;font-weight:600;color:var(--text);margin-bottom:10px;\">" + (data.title||role) + " — Market rates 2026</div>";
+          if (data.rows && data.rows.length) {
+            h2 += "<div class=\"cp-table-wrap\">";
+            h2 += "<table class=\"cp-table\"><thead><tr>";
+            (data.cols||["Level","Base salary","Total comp","Notes"]).forEach(function(c){ h2 += "<th class=\"cp-th\">" + c + "</th>"; });
+            h2 += "</tr></thead><tbody>";
+            data.rows.forEach(function(row, i) {
+              h2 += "<tr class=\"" + (i%2===1?"cp-row-alt":"") + "\">";
+              row.forEach(function(cell, j){ h2 += "<td class=\"cp-td " + (j===0?"bold":"mono") + "\">" + cell + "</td>"; });
+              h2 += "</tr>";
+            });
+            h2 += "</tbody></table></div>";
+          }
+          if (data.note) h2 += "<div class=\"cp-note\" style=\"margin-top:8px;\">" + data.note + "</div>";
+          h2 += "</div>";
+          result.innerHTML = h2;
+        })
+        .catch(function() { result.innerHTML = "<div style=\"font-size:13px;color:var(--danger);\">Could not reach server.</div>"; });
+    }
+
+    function renderTimeline() {
+      var el = document.getElementById("timeline-content");
+      if (!pipeline.length) {
+        el.innerHTML = "<div style=\"padding:48px;text-align:center;background:var(--surface);border:1px solid var(--border);border-radius:8px;color:var(--text-3);font-size:13px;\">No companies tracked yet. Add some from the Pipeline tab first.</div>";
+        return;
+      }
+
+      var cols = [
+        {key:"applying",     label:"Applying",      cls:"tl-col-applying"},
+        {key:"interviewing", label:"Interviewing",   cls:"tl-col-interviewing"},
+        {key:"offer",        label:"Got the offer",  cls:"tl-col-offer"},
+      ];
+      var sChip = {stable:"chip-s", caution:"chip-c", volatile:"chip-v"};
+      var sIcon = {stable:"✓", caution:"⚠", volatile:"✕"};
+
+      var h = "<div class=\"tl-kanban\">";
+
+      cols.forEach(function(col) {
+        var cos = pipeline.filter(function(co){ return co.stage === col.key; });
+        h += "<div>";
+        h += "<div class=\"tl-col-hdr " + col.cls + "\">";
+        h += "  <span class=\"tl-col-title\">" + col.label + "</span>";
+        h += "  <span class=\"tl-col-count\">" + cos.length + "</span>";
+        h += "</div>";
+
+        if (!cos.length) {
+          h += "<div class=\"tl-col-empty\">None yet</div>";
+        } else {
+          cos.forEach(function(co) {
+            var idx = pipeline.indexOf(co);
+            h += "<div class=\"tl-card\" onclick=\"jumpToCompany(" + idx + ")\">";
+            h += "  <div class=\"tl-card-top\">";
+            h += "    <span class=\"tl-card-name\">" + co.name + "</span>";
+            h += "    <span class=\"tl-card-time\">" + co.updated + "</span>";
+            h += "  </div>";
+            h += "  <div class=\"tl-card-bottom\">";
+            h += "    <span class=\"tl-card-sector\">" + (co.sector||"") + "</span>";
+            h += "    <span class=\"status-chip " + (sChip[co.status]||"chip-s") + "\">" + (sIcon[co.status]||"") + " " + cap(co.status) + "</span>";
+            h += "  </div>";
+            h += "</div>";
+          });
+        }
+        h += "</div>";
+      });
+
+      h += "</div>";
+      el.innerHTML = h;
+    }
+
     renderList();
     startAutoUpdate();
   </script>
+  <!-- OFFER DETAILS MODAL -->
+  <div class="modal-overlay" id="offer-modal" onclick="if(event.target===this)skipOfferDetails()">
+    <div class="modal">
+      <div class="modal-title">Enter offer details</div>
+      <div class="modal-sub">Optional — helps Canary give better negotiation advice and show comp benchmarks.</div>
+      <label class="modal-label">Base salary</label>
+      <input class="modal-input" id="od-base" placeholder="e.g. $145,000" style="margin-bottom:10px;"/>
+      <label class="modal-label">Equity / RSUs</label>
+      <input class="modal-input" id="od-equity" placeholder="e.g. $200K over 4 years" style="margin-bottom:10px;"/>
+      <label class="modal-label">Signing bonus</label>
+      <input class="modal-input" id="od-signing" placeholder="e.g. $25,000" style="margin-bottom:10px;"/>
+      <label class="modal-label">Start date</label>
+      <input class="modal-input" id="od-start" placeholder="e.g. August 1, 2026" style="margin-bottom:18px;"/>
+      <div class="modal-actions">
+        <button class="btn-cancel" onclick="skipOfferDetails()">Skip</button>
+        <button class="btn-analyze" onclick="saveOfferDetails()">Save & Analyze →</button>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>

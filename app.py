@@ -248,6 +248,104 @@ def health():
     })
 
 
+
+@app.route('/comp', methods=['GET'])
+def comp():
+    role = request.args.get('role', '').strip()
+    if not role:
+        return jsonify({"error": "Role required"}), 400
+    try:
+        prompt = """You are a compensation data expert. A job seeker wants market rate data for this role: """ + role + """
+
+Return ONLY valid JSON, no markdown:
+{
+  "title": "Clean role title (e.g. Senior Product Manager)",
+  "cols": ["Level", "Base salary", "Total comp", "Notes"],
+  "rows": [
+    ["Entry / Junior", "$X – $Y", "$X – $Y", "brief note"],
+    ["Mid-level",      "$X – $Y", "$X – $Y", "brief note"],
+    ["Senior",         "$X – $Y", "$X – $Y", "brief note"],
+    ["Staff / Lead",   "$X – $Y", "$X – $Y", "brief note"],
+    ["Director / VP",  "$X – $Y", "$X – $Y", "brief note"]
+  ],
+  "note": "One sentence about what drives pay variation in this role."
+}
+
+Use realistic 2026 US market data from levels.fyi, Glassdoor, Blind for top tech companies.
+Adjust levels to fit the role — e.g. for PM use APM/PM/Senior PM/Group PM/Director.
+Return ONLY the JSON object."""
+
+        response = gemini.models.generate_content(
+            model="gemini-2.5-flash",
+            contents=prompt
+        )
+        raw = response.text.strip()
+        import re as _re
+        raw = _re.sub(r'^```json\s*', '', raw, flags=_re.MULTILINE)
+        raw = _re.sub(r'^```\s*', '', raw, flags=_re.MULTILINE)
+        raw = _re.sub(r'\s*```$', '', raw, flags=_re.MULTILINE)
+        match = _re.search(r'\{[\s\S]*\}', raw)
+        if match: raw = match.group(0)
+        return jsonify(json.loads(raw))
+    except Exception as e:
+        print(f"Comp error: {e}")
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route('/comp-analyze', methods=['GET'])
+def comp_analyze():
+    role    = request.args.get('role', '').strip()
+    company = request.args.get('company', '').strip()
+    base    = request.args.get('base', '').strip()
+    equity  = request.args.get('equity', '').strip()
+    signing = request.args.get('signing', '').strip()
+
+    if not role or not base:
+        return jsonify({"error": "Role and base salary required"}), 400
+
+    try:
+        prompt = f"""You are a compensation expert. Analyze this job offer:
+
+Role: {role}
+Company: {company if company else "Not specified"}
+Base salary: {base}
+Equity / RSUs: {equity if equity else "Not provided"}
+Signing bonus: {signing if signing else "Not provided"}
+
+Compare against 2026 market rates for this role at top tech companies.
+
+Return ONLY valid JSON, no markdown:
+{{
+  "verdict": "above",
+  "range": "Market range for this role: $X – $Y base",
+  "summary": "2-3 sentence assessment of whether this offer is competitive and why.",
+  "tips": [
+    "Specific negotiation tip 1 based on the numbers",
+    "Specific negotiation tip 2",
+    "Specific negotiation tip 3"
+  ]
+}}
+
+verdict must be exactly one of: "above", "at", "below"
+Be specific — reference actual numbers from the offer in your summary.
+Return ONLY the JSON."""
+
+        response = gemini.models.generate_content(
+            model="gemini-2.5-flash",
+            contents=prompt
+        )
+        raw = response.text.strip()
+        import re as _re
+        raw = _re.sub(r'^```json\s*', '', raw, flags=_re.MULTILINE)
+        raw = _re.sub(r'^```\s*', '', raw, flags=_re.MULTILINE)
+        raw = _re.sub(r'\s*```$', '', raw, flags=_re.MULTILINE)
+        match = _re.search(r'\{{[\s\S]*\}}', raw)
+        if match: raw = match.group(0)
+        return jsonify(json.loads(raw))
+    except Exception as e:
+        print(f"Comp analyze error: {e}")
+        return jsonify({{"error": str(e)}}), 500
+
 if __name__ == '__main__':
     ensure_index()
     print("\n🐤 Canary is live")
